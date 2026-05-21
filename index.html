@@ -440,6 +440,7 @@
       background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035)),#051516;
       border:1px solid rgba(106,193,193,.36);
       border-top:8px solid var(--primary);
+      border-radius:8px;
       box-shadow:0 28px 90px rgba(0,0,0,.42);
       padding:34px;
     }
@@ -454,16 +455,84 @@
       position:relative;
       z-index:1;
     }
+    .form-progress{
+      margin:0 0 24px;
+      padding:18px;
+      border:1px solid rgba(106,193,193,.28);
+      border-radius:8px;
+      background:rgba(0,0,0,.26);
+    }
+    .progress-meta{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin:0 0 12px;
+      color:#eaffff;
+      font-weight:900;
+    }
+    .progress-meta span:first-child{
+      color:var(--primary-light);
+      font-size:.74rem;
+      letter-spacing:.9px;
+      text-transform:uppercase;
+    }
+    .progress-meta span:last-child{
+      text-align:right;
+      font-size:.9rem;
+    }
+    .progress-bar{
+      height:8px;
+      overflow:hidden;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+    }
+    .progress-bar span{
+      display:block;
+      width:16.66%;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--primary-light),var(--primary));
+      transition:width .24s ease;
+    }
     .form-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:20px;
+    }
+    .form-grid.is-stepped{
+      display:block;
+    }
+    .step-fields{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    .form-step{
+      display:none;
+      grid-column:1/-1;
+    }
+    .form-step.is-active{
+      display:block;
+      animation:stepIn .18s ease;
+    }
+    @keyframes stepIn{
+      from{opacity:0;transform:translateY(8px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    .form-step-title{
+      margin:0 0 18px;
+      color:#fff;
+      font-size:1.15rem;
+      line-height:1.2;
+      font-weight:900;
     }
     .field{display:flex;flex-direction:column;gap:9px}
     .field.full{
       grid-column:1/-1;
       padding:18px;
       border:1px solid rgba(106,193,193,.22);
+      border-radius:8px;
       background:rgba(0,0,0,.22);
     }
     .field-label{
@@ -475,7 +544,7 @@
       width:100%;
       min-height:52px;
       border:2px solid rgba(106,193,193,.26);
-      border-radius:0;
+      border-radius:8px;
       background:#fff;
       color:#061516;
       padding:13px 14px;
@@ -493,6 +562,7 @@
       position:relative;
       min-height:52px;
       border:2px solid rgba(106,193,193,.24);
+      border-radius:8px;
       background:rgba(0,0,0,.28);
       color:#eaffff;
       padding:13px 14px 13px 42px;
@@ -524,8 +594,19 @@
       gap:18px;
       margin-top:22px;
     }
+    .step-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:22px;
+    }
+    .step-actions .btn{
+      border-radius:8px;
+      min-width:150px;
+    }
+    .step-actions .btn[hidden]{display:none}
     .form-note{margin:0;color:#c5dcdc;font-size:.82rem;font-weight:600}
-    .form-actions .btn{border-radius:0;min-width:220px}
+    .form-actions .btn{border-radius:8px;min-width:220px}
     .status{min-height:22px;margin-top:16px;color:var(--primary-light);font-weight:800;font-size:.86rem}
     .success-state{
       display:none;
@@ -583,7 +664,7 @@
       .brand-panel{min-height:360px}
       .brand-panel-top{padding:22px}
       .panel-word strong{font-size:4rem}
-      .panel-steps,.quick-grid,.pain-grid,.benefit-list,.details-list,.form-grid,.option-grid{grid-template-columns:1fr}
+      .panel-steps,.quick-grid,.pain-grid,.benefit-list,.details-list,.form-grid,.step-fields,.option-grid{grid-template-columns:1fr}
       .panel-steps div,.quick-item,.pain-card,.details-list li{border-right:0}
       .pain-card:nth-last-child(-n+4){border-bottom:1px solid #d9e9e9}
       .pain-card:last-child,.details-list li:last-child{border-bottom:0}
@@ -591,10 +672,25 @@
       .method-row{grid-template-columns:72px 1fr}
       .method-row div{padding:21px}
       .lead-form{padding:22px}
+      .form-progress{padding:14px;margin-bottom:18px}
+      .progress-meta{display:grid;gap:4px}
+      .progress-meta span:last-child{text-align:left}
+      .field.full{padding:14px}
+      input,select,.option{min-height:50px;font-size:.92rem}
+      .option{padding:12px 12px 12px 40px}
+      .step-actions{display:grid;grid-template-columns:1fr;gap:10px}
+      .step-actions .btn{width:100%;min-width:0}
       .form-actions{display:grid}
       .form-actions .btn{width:100%;min-width:0}
       .footer-inner{display:grid;text-align:left}
       .footer-copy{text-align:left}
+    }
+    @media (max-width:420px){
+      .lead-section{padding:46px 0}
+      .form-aside{border-left-width:5px;padding-left:18px}
+      .form-aside img{width:168px;margin-bottom:20px}
+      .lead-form{padding:16px}
+      .option{font-size:.86rem}
     }
   </style>
 </head>
@@ -748,6 +844,14 @@
             <p>A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.</p>
           </div>
 
+          <div class="form-progress" id="formProgress" aria-label="Progresso do formulário">
+            <div class="progress-meta">
+              <span id="stepLabel">Etapa 1 de 6</span>
+              <span id="stepName">Seus dados</span>
+            </div>
+            <div class="progress-bar" aria-hidden="true"><span id="progressFill"></span></div>
+          </div>
+
           <form id="msForm" novalidate>
             <div class="form-grid">
               <div class="field">
@@ -845,10 +949,12 @@
               </div>
             </div>
 
-            <div class="form-actions">
-              <p class="form-note">Sem data, local ou horário definidos nesta página. A equipe enviará os detalhes confirmados pelo WhatsApp.</p>
-              <button type="submit" class="btn">Enviar meu interesse</button>
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" id="prevStep">Voltar</button>
+              <button type="button" class="btn" id="nextStep">Próximo</button>
+              <button type="submit" class="btn" id="submitLead" hidden>Enviar meu interesse</button>
             </div>
+            <p class="form-note">Sem data, local ou horário definidos nesta página. A equipe enviará os detalhes confirmados pelo WhatsApp.</p>
             <div id="sendStatus" class="status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -877,9 +983,94 @@
   <script>
     const API_ENDPOINT = '/api/inscricao';
     const form = document.getElementById('msForm');
+    const formGrid = form.querySelector('.form-grid');
     const sendStatus = document.getElementById('sendStatus');
     const successBlock = document.getElementById('formSuccess');
+    const formProgress = document.getElementById('formProgress');
+    const stepLabel = document.getElementById('stepLabel');
+    const stepName = document.getElementById('stepName');
+    const progressFill = document.getElementById('progressFill');
+    const prevStepBtn = document.getElementById('prevStep');
+    const nextStepBtn = document.getElementById('nextStep');
+    const submitLeadBtn = document.getElementById('submitLead');
+    const stepDefinitions = [
+      { title:'Seus dados', fields:['nome','telefone'] },
+      { title:'Como você chegou até a VOZUP', fields:['como_conheceu'] },
+      { title:'Onde a comunicação mais pesa hoje', fields:['situacao_dificuldade'] },
+      { title:'O que mais trava sua fala', fields:['maior_dificuldade','impacto_dificuldade'] },
+      { title:'Interesse e contato', fields:['interesse_workshop','contato_whatsapp'] },
+      { title:'Revisão final', review:true }
+    ];
+    let currentStep = 0;
     let isSubmitting = false;
+
+    function buildSteppedForm(){
+      const originalFields = Array.from(formGrid.children);
+      const fieldsByName = new Map();
+
+      originalFields.forEach(field => {
+        const control = field.querySelector('[name]');
+        if(control && control.name) fieldsByName.set(control.name, field);
+      });
+
+      formGrid.innerHTML = '';
+      formGrid.classList.add('is-stepped');
+
+      stepDefinitions.forEach((step, index) => {
+        const stepEl = document.createElement('section');
+        stepEl.className = 'form-step';
+        stepEl.dataset.step = String(index);
+        stepEl.setAttribute('aria-label', step.title);
+
+        const title = document.createElement('h3');
+        title.className = 'form-step-title';
+        title.textContent = step.title;
+        stepEl.appendChild(title);
+
+        if(step.review){
+          const review = document.createElement('div');
+          review.className = 'field full';
+          review.innerHTML = '<span class="field-label">Tudo pronto para enviar</span><p class="form-note" style="margin:0">Ao enviar, seus dados serão registrados para que a equipe da VOZUP compartilhe os detalhes do Workshop Inaugural pelo WhatsApp.</p>';
+          stepEl.appendChild(review);
+        } else {
+          const fieldsWrap = document.createElement('div');
+          fieldsWrap.className = 'step-fields';
+          step.fields.forEach(name => {
+            const field = fieldsByName.get(name);
+            if(field) fieldsWrap.appendChild(field);
+          });
+          stepEl.appendChild(fieldsWrap);
+        }
+
+        formGrid.appendChild(stepEl);
+      });
+    }
+
+    function showFormStep(index, shouldScroll = true){
+      const steps = Array.from(form.querySelectorAll('.form-step'));
+      currentStep = Math.max(0, Math.min(steps.length - 1, index));
+
+      steps.forEach((step, stepIndex) => {
+        step.classList.toggle('is-active', stepIndex === currentStep);
+      });
+
+      const total = steps.length;
+      const isFirst = currentStep === 0;
+      const isLast = currentStep === total - 1;
+      const percent = ((currentStep + 1) / total) * 100;
+
+      stepLabel.textContent = `Etapa ${currentStep + 1} de ${total}`;
+      stepName.textContent = stepDefinitions[currentStep].title;
+      progressFill.style.width = `${percent}%`;
+      prevStepBtn.hidden = isFirst;
+      nextStepBtn.hidden = isLast;
+      submitLeadBtn.hidden = !isLast;
+      setStatus('');
+
+      if(shouldScroll && window.innerWidth < 760){
+        formProgress.scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    }
 
     function setStatus(message, type = 'info'){
       sendStatus.textContent = message || '';
@@ -894,12 +1085,11 @@
       form.querySelectorAll('.error').forEach(error => { error.textContent = ''; });
     }
 
-    function validateForm(){
-      clearErrors();
+    function validateContainer(container){
       let valid = true;
       const radioNames = new Set();
 
-      form.querySelectorAll('input, select').forEach(input => {
+      container.querySelectorAll('input, select').forEach(input => {
         const name = input.name || input.id;
         if(!name) return;
 
@@ -940,6 +1130,30 @@
       return valid;
     }
 
+    function validateCurrentStep(){
+      clearErrors();
+      const step = form.querySelectorAll('.form-step')[currentStep];
+      return step ? validateContainer(step) : true;
+    }
+
+    function validateForm(){
+      clearErrors();
+      const steps = Array.from(form.querySelectorAll('.form-step'));
+      let firstInvalidStep = -1;
+
+      steps.forEach((step, index) => {
+        const valid = validateContainer(step);
+        if(!valid && firstInvalidStep === -1) firstInvalidStep = index;
+      });
+
+      if(firstInvalidStep !== -1){
+        showFormStep(firstInvalidStep);
+        return false;
+      }
+
+      return true;
+    }
+
     function getClientId(){
       const key = 'vozup:clientId';
       let stored = sessionStorage.getItem(key);
@@ -974,6 +1188,26 @@
       };
     }
 
+    nextStepBtn.addEventListener('click', () => {
+      if(!validateCurrentStep()){
+        setStatus('Preencha os campos obrigatórios desta etapa.', 'error');
+        return;
+      }
+      showFormStep(currentStep + 1);
+    });
+
+    prevStepBtn.addEventListener('click', () => {
+      showFormStep(currentStep - 1);
+    });
+
+    form.addEventListener('keydown', event => {
+      if(event.key !== 'Enter' || event.target.tagName === 'TEXTAREA') return;
+      if(currentStep < stepDefinitions.length - 1){
+        event.preventDefault();
+        nextStepBtn.click();
+      }
+    });
+
     form.addEventListener('submit', async event => {
       event.preventDefault();
       if(isSubmitting) return;
@@ -998,6 +1232,7 @@
         if(!response.ok) throw new Error('Falha ao enviar');
 
         form.hidden = true;
+        formProgress.hidden = true;
         successBlock.classList.add('is-visible');
         setStatus('Obrigado! A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.', 'ok');
         sessionStorage.removeItem('vozup:clientId');
@@ -1018,6 +1253,9 @@
       else if(digits.length > 2) phoneInput.value = `(${digits.slice(0,2)}) ${digits.slice(2)}`;
       else phoneInput.value = digits ? `(${digits}` : '';
     });
+
+    buildSteppedForm();
+    showFormStep(0, false);
   </script>
 </body>
 </html>
