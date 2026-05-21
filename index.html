@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop de Oratória e Inteligência Emocional | VOZUP</title>
+  <meta name="description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <link rel="icon" href="img/vozup-logo.jpeg" />
+  <link rel="apple-touch-icon" href="img/vozup-logo.jpeg" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Workshop de Oratória e Inteligência Emocional | VOZUP" />
+  <meta property="og:description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <meta property="og:image" content="img/vozup-logo.jpeg" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Workshop de Oratória e Inteligência Emocional | VOZUP" />
+  <meta property="twitter:description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <meta property="twitter:image" content="img/vozup-logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#000000;
+      --surface:#071112;
+      --surface-2:#0d1c1e;
+      --text:#ffffff;
+      --muted:#c8d3d4;
+      --soft:#eef7f7;
+      --ink:#071112;
+      --primary:#018E95;
+      --primary-dark:#007881;
+      --primary-light:#6AC1C1;
+      --border:rgba(106,193,193,.25);
+      --danger:#ff6565;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --focus-ring:0 0 0 4px rgba(1,142,149,.28);
+    }
+    *{box-sizing:border-box;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth;font-size:18px}
+    body{margin:0;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+    .container{width:min(1120px,100%);margin:0 auto;padding:0 24px}
+    .hero{position:relative;overflow:hidden;padding:34px 0 52px;background:radial-gradient(circle at 78% 18%,rgba(1,142,149,.34),transparent 34%),linear-gradient(145deg,#000 0%,#061416 58%,#000 100%)}
+    .hero:after{content:"";position:absolute;inset:auto -10% -28% -10%;height:260px;background:radial-gradient(ellipse at center,rgba(106,193,193,.18),transparent 68%);pointer-events:none}
+    .layout{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:start}
+    @media (max-width:960px){.layout{grid-template-columns:1fr}.hero{padding-top:24px}}
+    .brand-logo{width:178px;max-width:48vw;height:auto;display:block;margin:0 0 28px;filter:drop-shadow(0 14px 28px rgba(0,0,0,.45))}
+    .hero-kicker,.event-datetime{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:9px 14px;border:1px solid rgba(106,193,193,.38);border-radius:999px;color:#dffafa;background:rgba(1,142,149,.14);font-size:.72rem;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+    .hero h1{margin:0 0 16px;font-size:clamp(2.2rem,5vw,4.15rem);line-height:1.02;letter-spacing:0;color:#fff;max-width:860px}
+    .hero-title .t-accent{color:var(--primary-light)}
+    .hero p{margin:0 0 24px;color:var(--muted);font-size:clamp(1rem,1.7vw,1.22rem);max-width:760px}
+    .hero-points{display:grid;gap:10px;margin:0 0 22px;padding:0;list-style:none;max-width:720px}
+    .hero-points li{position:relative;padding:13px 16px 13px 48px;border:1px solid var(--border);border-radius:14px;background:rgba(7,17,18,.78);color:#f4ffff;font-weight:600;font-size:.94rem}
+    .hero-points li:before{content:"";position:absolute;left:16px;top:50%;width:18px;height:18px;border-radius:50%;transform:translateY(-50%);background:linear-gradient(135deg,var(--primary-light),var(--primary));box-shadow:0 0 0 5px rgba(1,142,149,.16)}
+    .scarcity{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px;color:#dffafa;font-size:.84rem;font-weight:700}
+    .cta-ribbon{display:inline-flex;align-items:center;padding:9px 13px;border-radius:999px;background:#fff;color:#003d42;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
+    .btn,.cta{appearance:none;border:2px solid var(--primary);border-radius:14px;background:var(--primary);color:#fff;padding:15px 22px;font-weight:800;font-size:1rem;letter-spacing:.2px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:.22s ease;box-shadow:0 12px 28px rgba(1,142,149,.26)}
+    .btn:hover,.cta:hover{background:var(--primary-dark);border-color:var(--primary-dark);transform:translateY(-1px)}
+    .btn:focus-visible,.cta:focus-visible,input:focus-visible,select:focus-visible{outline:none;box-shadow:var(--focus-ring)}
+    .btn-sec{background:transparent;color:#dffafa;border-color:rgba(106,193,193,.32);box-shadow:none}
+    .btn-sec:hover{background:rgba(106,193,193,.09);border-color:var(--primary-light)}
+    .card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:22px;background:rgba(7,17,18,.92);padding:28px 26px 32px;box-shadow:var(--shadow)}
+    .card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 0%,rgba(106,193,193,.22),transparent 42%);pointer-events:none}
+    .card>*{position:relative;z-index:1}
+    .form-title{margin:0 0 10px;text-align:center;color:#fff;font-size:1.18rem;font-weight:800;letter-spacing:.35px}
+    .form-intro{margin:0 0 18px;text-align:center;color:var(--muted);font-size:.86rem}
+    .form-header{display:flex;gap:8px;justify-content:center;margin:4px 0 16px;flex-wrap:wrap}
+    .dot{width:30px;height:30px;border-radius:50%;background:#0f2729;color:#93dada;border:1px solid rgba(106,193,193,.28);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:800}
+    .dot.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 0 0 4px rgba(1,142,149,.22)}
+    .dot.done{background:#fff;color:#00575d;border-color:#fff}
+    #progressText,#sendStatus{min-height:18px;margin:-4px 0 12px;text-align:center;color:#9ce2e2;font-size:.72rem;font-weight:600}
+    .form-step{display:none}.form-step.active{display:block}
+    .field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+    .field>label:first-child,.field legend{font-size:.95rem;color:#fff;font-weight:800;margin:0}
+    .field label{font-size:.9rem;color:#ecffff;font-weight:500}
+    .field input,.field select{width:100%;border:2px solid rgba(106,193,193,.22);border-radius:13px;background:#020707;color:#fff;padding:14px 15px;font:inherit;font-size:.95rem}
+    .field select{cursor:pointer}.field option{background:#071112;color:#fff}
+    .error{min-height:18px;color:var(--danger);font-size:.72rem;font-weight:600}
+    input[type=radio]{width:19px;height:19px;margin-right:7px;accent-color:var(--primary);transform:translateY(3px)}
+    .actions{display:flex;gap:12px;justify-content:space-between;margin-top:8px}.actions .btn{min-width:132px}
+    .success-state{padding:24px 20px;border-radius:18px;border:1px solid var(--border);background:rgba(1,142,149,.1);text-align:center}.success-state[hidden]{display:none}.success-state h3{margin:0 0 10px;color:var(--primary-light)}.success-state p{margin:0;color:#e7ffff}
+    .section{padding:64px 0;background:#fff;color:var(--ink)}
+    .section.dark{background:#000;color:#fff}.section.soft{background:#f3f8f8;color:var(--ink)}
+    .section h2{margin:0 0 14px;color:var(--primary-dark);font-size:clamp(1.55rem,3vw,2.45rem);line-height:1.12}.section.dark h2{color:var(--primary-light)}
+    .section-lead{max-width:840px;margin:0 0 24px;color:#425b5d;font-size:1rem}.section.dark .section-lead{color:var(--muted)}
+    .content-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.content-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.content-grid,.content-grid.two{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.content-grid,.content-grid.two{grid-template-columns:1fr}.actions{flex-direction:column-reverse}.actions .btn{width:100%}.card{padding:24px 18px}.container{padding:0 18px}}
+    .info-card{border:1px solid #dbe8e8;border-radius:18px;background:#fff;padding:20px;box-shadow:0 10px 28px rgba(7,17,18,.06)}
+    .dark .info-card{background:#071112;border-color:var(--border);box-shadow:none}.soft .info-card{background:#fff}
+    .info-card h3{margin:0 0 8px;color:var(--primary-dark);font-size:1.02rem}.dark .info-card h3{color:var(--primary-light)}
+    .info-card p{margin:0;color:#4b6264;font-size:.92rem}.dark .info-card p{color:var(--muted)}
+    .benefits,.workshop-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}.benefits li,.workshop-list li{position:relative;border:1px solid #dbe8e8;border-radius:15px;background:#fff;padding:14px 16px 14px 46px;color:#153638;font-weight:600}.dark .benefits li,.dark .workshop-list li{background:#071112;border-color:var(--border);color:#ecffff}
+    .benefits li:before,.workshop-list li:before{content:"";position:absolute;left:16px;top:18px;width:15px;height:15px;border-radius:50%;background:var(--primary)}
+    .cta-band{padding:56px 0;background:linear-gradient(135deg,#000,#062326);color:#fff;text-align:center}.cta-band h2{margin:0 0 12px;color:#fff;font-size:clamp(1.55rem,3vw,2.35rem)}.cta-band p{margin:0 auto 20px;max-width:720px;color:var(--muted)}
+    footer{padding:32px 0 42px;background:#000;color:#c7d4d5;font-size:.82rem}footer strong{display:block;color:#fff;margin-bottom:6px}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="layout">
+        <div>
+          <img class="brand-logo" src="img/vozup-logo.jpeg" alt="VOZUP - Escola de Oratória e Inteligência Emocional" />
+          <div class="hero-kicker">Workshop Inaugural da VOZUP</div>
+          <h1 class="hero-title">Destrave sua comunicação com <span class="t-accent">oratória e inteligência emocional</span></h1>
+          <p>Participe do Workshop Inaugural da VOZUP e aprenda, na prática, a controlar o nervosismo, organizar suas ideias e falar com mais segurança.</p>
+          <ul class="hero-points" aria-label="Benefícios principais do workshop">
+            <li>Workshop 100% prático, com atividades mão na massa.</li>
+            <li>Foco em controlar nervosismo, ansiedade e medo de travar.</li>
+            <li>Exercícios para falar com mais clareza, presença e segurança.</li>
+          </ul>
+          <a class="cta" href="#formCard">Quero participar do Workshop</a>
+          <div class="scarcity"><span class="cta-ribbon">Vagas limitadas</span><span>Experiência prática com atenção individual aos participantes.</span></div>
+        </div>
+
+        <div id="formCard" class="card">
+          <h2 class="form-title" id="formTitle">Garanta seu interesse na turma inaugural</h2>
+          <p class="form-intro">Preencha seus dados para receber os detalhes do Workshop Inaugural da VOZUP pelo WhatsApp.</p>
+          <div class="form-header" id="progressDots" aria-label="Progresso do formulário">
+            <div class="dot" data-step="0">1</div><div class="dot" data-step="1">2</div><div class="dot" data-step="2">3</div><div class="dot" data-step="3">4</div><div class="dot" data-step="4">5</div><div class="dot" data-step="5">6</div><div class="dot" data-step="6">7</div><div class="dot" data-step="7">8</div>
+          </div>
+          <div id="progressText">Etapa 1 de 8</div>
+          <div id="sendStatus" role="status" aria-live="polite"></div>
+          <div id="formSuccess" class="success-state" hidden>
+            <h3>Obrigado!</h3>
+            <p>A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.</p>
+          </div>
+          <form id="msForm" novalidate>
+            <div class="form-step active" data-step="0">
+              <div class="field"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" placeholder="Seu nome completo" autocomplete="name" required><div class="error" data-for="nome"></div></div>
+              <div class="field"><label for="telefone">WhatsApp</label><input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel" required><div class="error" data-for="telefone"></div></div>
+              <div class="actions"><span></span><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="1">
+              <div class="field"><label>Como você conheceu a VOZUP?</label>
+                <label><input type="radio" name="como_conheceu" value="Comunicação visual da escola" required> Comunicação visual da escola</label><label><input type="radio" name="como_conheceu" value="Instagram"> Instagram</label><label><input type="radio" name="como_conheceu" value="Indicação"> Indicação</label><label><input type="radio" name="como_conheceu" value="WhatsApp"> WhatsApp</label><label><input type="radio" name="como_conheceu" value="Outro"> Outro</label><div class="error" data-for="como_conheceu"></div>
+              </div><div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="2">
+              <div class="field"><label>Hoje, em qual situação você sente mais dificuldade para se comunicar?</label>
+                <label><input type="radio" name="situação_dificuldade" value="Falar em público" required> Falar em público</label><label><input type="radio" name="situação_dificuldade" value="Participar de reuniões"> Participar de reuniões</label><label><input type="radio" name="situação_dificuldade" value="Apresentar ideias, trabalhos ou projetos"> Apresentar ideias, trabalhos ou projetos</label><label><input type="radio" name="situação_dificuldade" value="Atender ou vender para clientes"> Atender ou vender para clientes</label><label><input type="radio" name="situação_dificuldade" value="Gravar vídeos"> Gravar vídeos</label><label><input type="radio" name="situação_dificuldade" value="Liderar ou se posicionar melhor"> Liderar ou se posicionar melhor</label><label><input type="radio" name="situação_dificuldade" value="Conversar com mais segurança no dia a dia"> Conversar com mais segurança no dia a dia</label><label><input type="radio" name="situação_dificuldade" value="Outro"> Outro</label><div class="error" data-for="situação_dificuldade"></div>
+              </div><div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="3">
+              <div class="field"><label>Qual e a sua maior dificuldade na comunicação?</label>
+                <label><input type="radio" name="maior_dificuldade" value="Nervosismo" required> Nervosismo</label><label><input type="radio" name="maior_dificuldade" value="Medo de travar"> Medo de travar</label><label><input type="radio" name="maior_dificuldade" value="Ansiedade antes de falar"> Ansiedade antes de falar</label><label><input type="radio" name="maior_dificuldade" value="Vergonha"> Vergonha</label><label><input type="radio" name="maior_dificuldade" value="Branco na hora de falar"> Branco na hora de falar</label><label><input type="radio" name="maior_dificuldade" value="Voz trêmula"> Voz trêmula</label><label><input type="radio" name="maior_dificuldade" value="Falta de confiança"> Falta de confiança</label><label><input type="radio" name="maior_dificuldade" value="Dificuldade para organizar as ideias"> Dificuldade para organizar as ideias</label><label><input type="radio" name="maior_dificuldade" value="Outro"> Outro</label><div class="error" data-for="maior_dificuldade"></div>
+              </div><div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="4">
+              <div class="field"><label for="impacto_dificuldade">De 0 a 10, quanto essa dificuldade atrapalha sua vida pessoal ou profissional?</label><select id="impacto_dificuldade" name="impacto_dificuldade" required><option value="">Selecione uma nota</option><option value="0">0 - Não atrapalha</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10 - Atrapalha muito</option></select><div class="error" data-for="impacto_dificuldade"></div></div>
+              <div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="5">
+              <div class="field"><label>Você tem interesse em participar do Workshop Inaugural da VOZUP?</label>
+                <label><input type="radio" name="interesse_workshop" value="Sim, quero receber mais informações" required> Sim, quero receber mais informações</label><label><input type="radio" name="interesse_workshop" value="Tenho interesse, mas quero entender melhor"> Tenho interesse, mas quero entender melhor</label><label><input type="radio" name="interesse_workshop" value="Quero saber sobre valores e condições"> Quero saber sobre valores e condições</label><label><input type="radio" name="interesse_workshop" value="Ainda estou avaliando"> Ainda estou avaliando</label><div class="error" data-for="interesse_workshop"></div>
+              </div><div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="6">
+              <div class="field"><label>Podemos entrar em contato pelo WhatsApp para passar os detalhes?</label><label><input type="radio" name="contato_whatsapp" value="Sim" required> Sim</label><label><input type="radio" name="contato_whatsapp" value="Não"> Não</label><div class="error" data-for="contato_whatsapp"></div></div>
+              <div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="button" class="btn" data-next>Próximo</button></div>
+            </div>
+            <div class="form-step" data-step="7">
+              <div class="field"><label>Revise e envie seu interesse</label><p class="form-intro" style="text-align:left;margin:0;color:#c8d3d4">Ao enviar, seus dados serão registrados para que a equipe da VOZUP compartilhe os detalhes do Workshop Inaugural.</p></div>
+              <div class="actions"><button type="button" class="btn btn-sec" data-back>Voltar</button><button type="submit" class="btn">Enviar meu interesse</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section soft">
+      <div class="container">
+        <h2>Você sente que sua comunicação te trava?</h2>
+        <p class="section-lead">Essas dificuldades são mais comuns do que parecem, mas podem ser trabalhadas com prática, orientação e inteligência emocional.</p>
+        <div class="content-grid two">
+          <ul class="benefits"><li>Medo de falar em público</li><li>Nervosismo antes de se apresentar</li><li>Ansiedade na hora de se comunicar</li><li>Branco na hora de falar</li></ul>
+          <ul class="benefits"><li>Vergonha de se posicionar</li><li>Dificuldade para organizar ideias</li><li>Falta de confiança</li><li>Voz trêmula ou insegura</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container">
+        <h2>O Workshop foi criado para quem quer falar com mais segurança</h2>
+        <p class="section-lead">No Workshop Inaugural da VOZUP, você vai vivenciar exercícios práticos de comunicação, expressão e controle emocional para desenvolver uma fala mais clara, segura e confiante.</p>
+        <div class="content-grid two">
+          <ul class="benefits"><li>Falar com mais segurança</li><li>Controlar o nervosismo</li><li>Reduzir o medo de travar</li><li>Organizar melhor as ideias</li></ul>
+          <ul class="benefits"><li>Melhorar apresentações, reuniões e conversas profissionais</li><li>Desenvolver confiança ao se comunicar</li><li>Aprender na prática com exercícios de oratória</li><li>Destravar a comunicação com orientação aplicada</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Oratória com inteligência emocional</h2>
+        <p class="section-lead">A VOZUP não ensina apenas técnica de fala. O método trabalha também o lado emocional da comunicação, ajudando a pessoa a lidar com ansiedade, insegurança e medo no momento em que mais precisa se expressar.</p>
+        <div class="content-grid">
+          <article class="info-card"><h3>Oratória prática</h3><p>Exercícios reais para desenvolver segurança, clareza e presença na comunicação.</p></article>
+          <article class="info-card"><h3>Inteligência emocional</h3><p>Estratégias para lidar com nervosismo, ansiedade e medo de travar.</p></article>
+          <article class="info-card"><h3>Atenção individual</h3><p>Vagas limitadas para que cada participante receba acompanhamento mais próximo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <h2>Workshop Inaugural VOZUP</h2>
+        <p class="section-lead">Uma experiência presencial, prática e voltada para quem deseja melhorar a comunicação com mais controle emocional e segurança ao falar.</p>
+        <ul class="workshop-list">
+          <li>Formato: Presencial</li>
+          <li>Modalidade: 100% prático</li>
+          <li>Público: Pessoas que querem melhorar a comunicação</li>
+          <li>Vagas: Limitadas</li>
+          <li>Foco: Oratória, confiança e inteligência emocional</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>As vagas serão limitadas</h2>
+        <p>Para garantir uma experiência prática e individualizada, a turma inaugural terá número reduzido de participantes.</p>
+        <a class="cta" href="#formCard">Quero receber os detalhes</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>VOZUP - Escola de Oratória e Inteligência Emocional</strong>
+      Comunicação com segurança, clareza e inteligência emocional.
+    </div>
+  </footer>
+
+  <script>
+    const API_ENDPOINT = '/api/inscricao';
+    const form = document.getElementById('msForm');
+    const steps = Array.from(document.querySelectorAll('.form-step'));
+    const dots = Array.from(document.querySelectorAll('#progressDots .dot'));
+    const progressText = document.getElementById('progressText');
+    const sendStatus = document.getElementById('sendStatus');
+    const successBlock = document.getElementById('formSuccess');
+    const formTitle = document.getElementById('formTitle');
+    const allData = {};
+    let current = 0;
+    let isSubmitting = false;
+
+    function showStep(index){
+      current = Math.max(0, Math.min(steps.length - 1, index));
+      steps.forEach((step, idx)=> step.classList.toggle('active', idx === current));
+      dots.forEach((dot, idx)=>{ dot.classList.toggle('active', idx === current); dot.classList.toggle('done', idx < current); });
+      progressText.textContent = `Etapa ${current + 1} de ${steps.length}`;
+    }
+
+    function setStatus(message, type='info'){
+      sendStatus.textContent = message || '';
+      sendStatus.style.color = type === 'error' ? '#ff8b8b' : type === 'ok' ? '#9ff4da' : '#9ce2e2';
+    }
+
+    function validateCurrent(){
+      const section = steps[current];
+      let valid = true;
+      section.querySelectorAll('.error').forEach(error => error.textContent = '');
+      const radioNames = new Set();
+      section.querySelectorAll('input, select').forEach(input => {
+        const name = input.name || input.id;
+        const error = section.querySelector(`.error[data-for="${name}"]`);
+        if(input.type === 'radio'){
+          if(radioNames.has(name)) return;
+          radioNames.add(name);
+          if(!section.querySelector(`input[name="${CSS.escape(name)}"]:checked`)){
+            if(error) error.textContent = 'Selecione uma opção.';
+            valid = false;
+          }
+          return;
+        }
+        if(input.required && !String(input.value || '').trim()){
+          if(error) error.textContent = 'Campo obrigatório.';
+          valid = false;
+        }
+        if(name === 'nome' && input.value.trim().split(/\s+/).length < 2){
+          if(error) error.textContent = 'Informe seu nome completo.';
+          valid = false;
+        }
+        if(name === 'telefone'){
+          const digits = input.value.replace(/\D+/g,'');
+          if(digits.length < 10 || digits.length > 11){
+            if(error) error.textContent = 'Informe um WhatsApp válido.';
+            valid = false;
+          }
+        }
+      });
+      return valid;
+    }
+
+    function collectData(){
+      const inputs = form.querySelectorAll('input, select');
+      inputs.forEach(input => {
+        const key = input.name || input.id;
+        if(!key) return;
+        if(input.type === 'radio'){
+          if(input.checked) allData[key] = input.value;
+        } else {
+          allData[key] = input.value;
+        }
+      });
+      return {
+        nome_evento:'Workshop Inaugural VOZUP',
+        escola:'VOZUP - Escola de Oratória e Inteligência Emocional',
+        modalidade:'Workshop 100% prático',
+        foco:'Oratória, confiança e inteligência emocional',
+        ...allData,
+        clientId:getClientId(),
+        timestamp:new Date().toISOString(),
+        page:location.href,
+        _final:true
+      };
+    }
+
+    function getClientId(){
+      const key = 'vozup:clientId';
+      let stored = sessionStorage.getItem(key);
+      if(stored) return stored;
+      stored = (crypto.randomUUID ? crypto.randomUUID() : `id-${Date.now()}-${Math.random().toString(36).slice(2)}`);
+      sessionStorage.setItem(key, stored);
+      return stored;
+    }
+
+    form.addEventListener('click', event => {
+      const next = event.target.closest('[data-next]');
+      const back = event.target.closest('[data-back]');
+      if(next){
+        if(!validateCurrent()){ setStatus('Preencha os campos obrigatórios.', 'error'); return; }
+        collectData(); setStatus(''); showStep(current + 1);
+      }
+      if(back){ collectData(); setStatus(''); showStep(current - 1); }
+    });
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if(isSubmitting) return;
+      if(!validateCurrent()){ setStatus('Preencha os campos obrigatórios.', 'error'); return; }
+      isSubmitting = true;
+      const submit = form.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      submit.textContent = 'Enviando...';
+      setStatus('Enviando seu interesse...', 'info');
+      try{
+        const response = await fetch(API_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(collectData()) });
+        if(!response.ok) throw new Error('Falha ao enviar');
+        form.hidden = true;
+        document.getElementById('progressDots').hidden = true;
+        progressText.hidden = true;
+        formTitle.textContent = 'Interesse enviado';
+        successBlock.hidden = false;
+        setStatus('Obrigado! A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.', 'ok');
+        sessionStorage.removeItem('vozup:clientId');
+      }catch(error){
+        console.warn(error);
+        setStatus('Não foi possível enviar agora. Tente novamente em instantes.', 'error');
+        submit.disabled = false;
+        submit.textContent = 'Enviar meu interesse';
+        isSubmitting = false;
+      }
+    });
+
+    const phoneInput = document.getElementById('telefone');
+    phoneInput.addEventListener('input', () => {
+      const digits = phoneInput.value.replace(/\D+/g,'').slice(0,11);
+      if(digits.length > 10) phoneInput.value = `(${digits.slice(0,2)}) ${digits.slice(2,7)}-${digits.slice(7)}`;
+      else if(digits.length > 6) phoneInput.value = `(${digits.slice(0,2)}) ${digits.slice(2,6)}-${digits.slice(6)}`;
+      else if(digits.length > 2) phoneInput.value = `(${digits.slice(0,2)}) ${digits.slice(2)}`;
+      else phoneInput.value = digits ? `(${digits}` : '';
+    });
+
+    showStep(0);
+  </script>
+</body>
+</html>
+
+
