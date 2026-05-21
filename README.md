@@ -1,6 +1,6 @@
 ﻿# Painel de Inscrições – Plano de Implementação
 
-Guia para criar o painel administrativo que irá listar, filtrar e detalhar as inscrições coletadas pelo formulário multi-etapas do Encontro UP. O objetivo é hospedar esse painel na Vercel e ler diretamente os dados já armazenados no Postgres da Hostinger (`inscricoes.inscricoes`).
+Guia para criar o painel administrativo que irá listar, filtrar e detalhar os leads coletados pelo formulário do Workshop Inaugural da VOZUP. O objetivo é hospedar esse painel na Vercel e ler diretamente os dados já armazenados no Postgres da Hostinger (`inscricoes.inscricoes`).
 
 ## Visão Geral
 - Painel em **Next.js 14+ (App Router)** com **TypeScript** e **Tailwind CSS**.

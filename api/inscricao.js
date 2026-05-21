@@ -299,9 +299,9 @@ function getEventNameFromPayload(payload) {
     payload?.evento ||
     payload?.treinamento ||
     payload?.training_name ||
-    'Encontro UP',
+    'Workshop Inaugural VOZUP',
     120
-  ) || 'Encontro UP';
+  ) || 'Workshop Inaugural VOZUP';
 }
 
 function getTrainingDateFromPayload(payload) {
