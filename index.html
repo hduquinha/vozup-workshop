@@ -1163,6 +1163,39 @@
       return stored;
     }
 
+    function normalizeText(value){
+      return String(value ?? '').replace(/\s+/g, ' ').trim();
+    }
+
+    function toTitleCase(value){
+      const lowercaseWords = new Set(['da', 'de', 'do', 'das', 'dos', 'e']);
+      return normalizeText(value)
+        .toLowerCase()
+        .split(' ')
+        .filter(Boolean)
+        .map((word, index) => {
+          if(index > 0 && lowercaseWords.has(word)) return word;
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(' ');
+    }
+
+    function normalizePhone(value){
+      return String(value ?? '').replace(/\D+/g, '');
+    }
+
+    function normalizePayloadValues(payload){
+      const normalized = { ...payload };
+      if(typeof normalized.nome === 'string') normalized.nome = toTitleCase(normalized.nome);
+      if(typeof normalized.telefone === 'string') normalized.telefone = normalizePhone(normalized.telefone);
+      Object.keys(normalized).forEach(key => {
+        if(typeof normalized[key] === 'string' && !['nome', 'telefone', 'page'].includes(key)){
+          normalized[key] = normalizeText(normalized[key]);
+        }
+      });
+      return normalized;
+    }
+
     function collectData(){
       const data = {};
       form.querySelectorAll('input, select').forEach(input => {
@@ -1175,7 +1208,7 @@
         }
       });
 
-      return {
+      return normalizePayloadValues({
         nome_evento:'Workshop Inaugural VOZUP',
         escola:'VOZUP - Escola de Oratória e Inteligência Emocional',
         modalidade:'Workshop 100% prático',
@@ -1185,7 +1218,7 @@
         timestamp:new Date().toISOString(),
         page:location.href,
         _final:true
-      };
+      });
     }
 
     nextStepBtn.addEventListener('click', () => {
