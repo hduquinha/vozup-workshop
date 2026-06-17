@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workshop de Oratória e Inteligência Emocional | VOZUP</title>
-  <meta name="description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <title>Inauguração VOZUP Escola de Oratória | Convite VIP — Tatuapé, SP</title>
+  <meta name="description" content="Convite VIP para as 3 noites de inauguração da VOZUP Escola de Oratória. 07, 08 e 09 de Julho às 19h. Coquetel de boas-vindas + aula experimental gratuita. Tatuapé, SP." />
   <link rel="icon" href="img/vozup-logo.jpeg" />
   <link rel="apple-touch-icon" href="img/vozup-logo.jpeg" />
   <meta name="theme-color" content="#000000" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Workshop de Oratória e Inteligência Emocional | VOZUP" />
-  <meta property="og:description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <meta property="og:title" content="Inauguração VOZUP Escola de Oratória | Convite VIP" />
+  <meta property="og:description" content="3 noites de inauguração com coquetel e aula experimental gratuita. 07, 08 e 09 de Julho · 19h · Tatuapé, SP." />
   <meta property="og:image" content="img/vozup-logo.jpeg" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Workshop de Oratória e Inteligência Emocional | VOZUP" />
-  <meta property="twitter:description" content="Participe do Workshop Inaugural da VOZUP e aprenda a destravar sua comunicação com oratória prática e inteligência emocional." />
+  <meta property="twitter:title" content="Inauguração VOZUP Escola de Oratória | Convite VIP" />
+  <meta property="twitter:description" content="3 noites de inauguração com coquetel e aula experimental gratuita. 07, 08 e 09 de Julho · 19h · Tatuapé, SP." />
   <meta property="twitter:image" content="img/vozup-logo.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
   <style>
     :root{
       --black:#000000;
@@ -32,6 +32,8 @@
       --primary-light:#6AC1C1;
       --line:rgba(106,193,193,.26);
       --line-dark:rgba(0,120,129,.18);
+      --gold:#f59e0b;
+      --gold-light:#fcd34d;
       --danger:#d92d20;
       --focus:0 0 0 4px rgba(1,142,149,.24);
       --shadow:0 24px 70px rgba(0,0,0,.22);
@@ -49,6 +51,7 @@
     a{color:inherit}
     .container{width:min(1160px,100%);margin:0 auto;padding:0 24px}
 
+    /* ── TOPBAR ─────────────────────────────── */
     .topbar{
       position:relative;
       z-index:5;
@@ -74,7 +77,28 @@
     }
     .nav-logo img{width:132px;height:auto;display:block}
     .nav-logo span{font-size:.72rem;color:#bde7e7;text-transform:uppercase;letter-spacing:.9px}
+    .nav-vip{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .vip-chip{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 14px;
+      border:1px solid rgba(245,158,11,.36);
+      border-radius:999px;
+      background:rgba(245,158,11,.10);
+      color:var(--gold-light);
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.9px;
+      text-transform:uppercase;
+    }
+    .vip-chip svg{width:10px;height:10px;fill:var(--gold)}
 
+    /* ── BUTTONS ────────────────────────────── */
     .btn{
       appearance:none;
       border:2px solid var(--primary);
@@ -101,14 +125,17 @@
     .btn-light:hover{background:var(--primary-light);border-color:var(--primary-light);color:#002c30}
     .btn-ghost{background:transparent;border-color:rgba(255,255,255,.24);box-shadow:none;color:#fff}
     .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--primary-light)}
+    .btn-gold{background:var(--gold);border-color:var(--gold);color:#1a0a00;box-shadow:0 14px 28px rgba(245,158,11,.28)}
+    .btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light);color:#1a0a00}
 
+    /* ── HERO ───────────────────────────────── */
     .hero{
       position:relative;
       overflow:hidden;
       color:#fff;
       background:
-        linear-gradient(90deg,rgba(106,193,193,.10) 1px,transparent 1px),
-        linear-gradient(180deg,rgba(106,193,193,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(106,193,193,.08) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(106,193,193,.06) 1px,transparent 1px),
         #000;
       background-size:72px 72px;
     }
@@ -116,7 +143,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(118deg,rgba(0,0,0,.15) 0 42%,rgba(1,142,149,.18) 42% 56%,rgba(0,0,0,.08) 56% 100%);
+      background:linear-gradient(118deg,rgba(0,0,0,.12) 0 40%,rgba(1,142,149,.14) 40% 56%,rgba(0,0,0,.06) 56% 100%);
       pointer-events:none;
     }
     .hero-inner{
@@ -124,7 +151,7 @@
       z-index:1;
       min-height:calc(100vh - 76px);
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(360px,.72fr);
+      grid-template-columns:minmax(0,1fr) minmax(340px,.76fr);
       gap:46px;
       align-items:center;
       padding:70px 24px 82px;
@@ -137,16 +164,16 @@
       gap:10px;
       margin:0 0 22px;
       padding:10px 14px;
-      border:1px solid var(--line);
+      border:1px solid rgba(245,158,11,.36);
       border-radius:999px;
-      background:rgba(1,142,149,.12);
-      color:#dffafa;
+      background:rgba(245,158,11,.10);
+      color:var(--gold-light);
       font-size:.72rem;
       font-weight:900;
       letter-spacing:.9px;
       text-transform:uppercase;
     }
-    .eyebrow:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--primary-light)}
+    .eyebrow:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
     .hero h1{
       max-width:840px;
       margin:0;
@@ -165,97 +192,268 @@
     }
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 0}
     .hero-note{
+      display:flex;
+      align-items:center;
+      gap:9px;
       margin:18px 0 0;
       color:#b9d8d9;
       font-size:.88rem;
       font-weight:700;
     }
+    .hero-note svg{flex-shrink:0;opacity:.7}
 
-    .brand-panel{
+    /* ── ILLUSTRATION PANEL ─────────────────── */
+    .ill-panel{
+      position:relative;
       border:1px solid var(--line);
-      background:rgba(0,0,0,.72);
-      box-shadow:var(--shadow);
-      min-height:560px;
-      display:grid;
-      grid-template-rows:auto 1fr auto;
+      background:rgba(0,0,0,.78);
+      box-shadow:0 32px 90px rgba(0,0,0,.38);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
     }
-    .brand-panel-top{
-      padding:30px;
+    .ill-panel-top{
+      padding:22px 28px 20px;
       border-bottom:1px solid var(--line);
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:20px;
+      gap:16px;
     }
-    .brand-panel-top img{width:176px;max-width:58%;height:auto;display:block}
-    .panel-label{
-      color:#99dcdc;
-      font-size:.68rem;
+    .ill-panel-top img{width:152px;max-width:52%;height:auto;display:block}
+    .vip-stamp{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      width:72px;
+      height:72px;
+      border:2px solid var(--gold);
+      border-radius:50%;
+      background:rgba(245,158,11,.10);
+      color:var(--gold-light);
+      font-size:.56rem;
       font-weight:900;
-      letter-spacing:1px;
-      text-align:right;
+      letter-spacing:.8px;
       text-transform:uppercase;
+      text-align:center;
+      line-height:1.25;
+      position:relative;
+      flex-shrink:0;
+      animation:stampPulse 3s ease-in-out infinite;
     }
-    .panel-word{
-      display:grid;
-      place-items:center;
-      padding:32px 24px;
+    .vip-stamp svg{width:16px;height:16px;fill:var(--gold);margin-bottom:2px}
+    @keyframes stampPulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.3)}
+      50%{box-shadow:0 0 0 8px rgba(245,158,11,.06)}
+    }
+    .ill-svg-area{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 20px;
       background:
-        linear-gradient(135deg,transparent 0 48%,rgba(106,193,193,.18) 48% 52%,transparent 52% 100%);
+        radial-gradient(ellipse 60% 60% at 50% 50%, rgba(1,142,149,.08), transparent 70%);
     }
-    .panel-word strong{
-      display:block;
-      color:#fff;
-      font-size:clamp(4rem,10vw,7.4rem);
-      line-height:.86;
-      letter-spacing:.02em;
-      text-align:center;
-      text-transform:uppercase;
-    }
-    .panel-word span{
-      display:block;
-      margin-top:16px;
-      color:var(--primary-light);
-      font-weight:900;
-      letter-spacing:.16em;
-      text-align:center;
-      text-transform:uppercase;
-    }
-    .panel-steps{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
+    .ill-svg-area svg{width:100%;max-width:320px;height:auto;display:block}
+    .ill-panel-footer{
       border-top:1px solid var(--line);
     }
-    .panel-steps div{
-      min-height:108px;
-      padding:18px;
-      border-right:1px solid var(--line);
-      color:#dffafa;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:.7px;
-      display:flex;
-      align-items:end;
+    .ill-dates-row{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
     }
-    .panel-steps div:last-child{border-right:0}
+    .ill-date-item{
+      padding:16px 14px;
+      border-right:1px solid var(--line);
+      text-align:center;
+    }
+    .ill-date-item:last-child{border-right:0}
+    .ill-date-item b{
+      display:block;
+      color:#fff;
+      font-size:1.55rem;
+      font-weight:900;
+      line-height:1;
+    }
+    .ill-date-item span{
+      display:block;
+      color:var(--primary-light);
+      font-size:.65rem;
+      font-weight:900;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
+    .ill-location{
+      padding:14px 20px;
+      border-top:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#99dcdc;
+      font-size:.76rem;
+      font-weight:700;
+    }
+    .ill-location svg{flex-shrink:0;color:var(--primary-light)}
 
+    /* ── DATES SECTION ──────────────────────── */
+    .dates-section{
+      background:#000;
+      border-top:1px solid rgba(106,193,193,.14);
+      border-bottom:1px solid rgba(106,193,193,.14);
+      padding:72px 0;
+    }
+    .dates-head{
+      max-width:760px;
+      margin:0 0 48px;
+    }
+    .dates-kicker{
+      margin:0 0 10px;
+      color:var(--gold);
+      font-size:.74rem;
+      font-weight:900;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    .dates-head h2{
+      margin:0;
+      color:#fff;
+      font-size:clamp(2rem,4.2vw,3.4rem);
+      font-weight:900;
+      line-height:1;
+    }
+    .dates-head p{
+      margin:14px 0 0;
+      color:#c5dcdc;
+      font-size:1.05rem;
+      max-width:680px;
+    }
+    .nights-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:2px;
+      border:1px solid var(--line);
+    }
+    .night-card{
+      position:relative;
+      overflow:hidden;
+      padding:36px 30px;
+      background:#050f10;
+      transition:background .2s ease;
+    }
+    .night-card:hover{background:#071418}
+    .night-card:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(106,193,193,.10),transparent 60%);
+      pointer-events:none;
+    }
+    .night-number{
+      position:absolute;
+      top:24px;
+      right:24px;
+      color:rgba(106,193,193,.2);
+      font-size:3.5rem;
+      font-weight:900;
+      line-height:1;
+      letter-spacing:.04em;
+    }
+    .night-date{
+      margin:0 0 8px;
+      color:var(--primary-light);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    .night-day{
+      margin:0;
+      color:#fff;
+      font-size:clamp(2.8rem,5vw,4.5rem);
+      font-weight:900;
+      line-height:1;
+    }
+    .night-month{
+      display:block;
+      color:#99dcdc;
+      font-size:.88rem;
+      font-weight:700;
+      margin-top:2px;
+      text-transform:uppercase;
+      letter-spacing:.6px;
+    }
+    .night-divider{
+      width:36px;
+      height:3px;
+      background:var(--primary);
+      margin:20px 0;
+    }
+    .night-features{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .night-features li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:#d0e8e8;
+      font-size:.84rem;
+      font-weight:700;
+    }
+    .night-features li svg{flex-shrink:0;margin-top:2px;color:var(--primary-light)}
+    .night-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:24px;
+      padding:7px 14px;
+      border:1px solid rgba(245,158,11,.28);
+      border-radius:999px;
+      background:rgba(245,158,11,.08);
+      color:var(--gold-light);
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+    }
+    .night-tag svg{fill:var(--gold);width:8px;height:8px}
+
+    /* ── QUICK STRIP ────────────────────────── */
     .quick-strip{background:#fff;color:var(--ink);border-bottom:1px solid #dceaea}
     .quick-grid{display:grid;grid-template-columns:repeat(3,1fr)}
     .quick-item{
       padding:28px 24px;
       border-right:1px solid #dceaea;
+      display:flex;
+      align-items:center;
+      gap:16px;
     }
     .quick-item:last-child{border-right:0}
-    .quick-item b{display:block;color:var(--primary-dark);font-size:1.65rem;line-height:1;margin-bottom:8px}
+    .quick-icon{
+      flex-shrink:0;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      background:#eaf8f8;
+      display:grid;
+      place-items:center;
+    }
+    .quick-icon svg{color:var(--primary-dark)}
+    .quick-item b{display:block;color:var(--primary-dark);font-size:1.55rem;line-height:1;margin-bottom:6px}
     .quick-item span{display:block;color:var(--body);font-weight:700;font-size:.9rem}
 
+    /* ── SECTIONS ───────────────────────────── */
     .section{background:#fff;color:var(--ink);padding:86px 0}
     .section.dark{background:#000;color:#fff}
     .section.tinted{background:var(--paper)}
-    .section-head{
-      max-width:820px;
-      margin:0 0 34px;
-    }
+    .section-head{max-width:820px;margin:0 0 42px}
     .section-kicker{
       margin:0 0 10px;
       color:var(--primary-dark);
@@ -282,27 +480,42 @@
     }
     .dark .section-lead{color:#c5dcdc}
 
+    /* ── PAIN GRID ──────────────────────────── */
     .pain-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       border:1px solid #d9e9e9;
-      background:#fff;
     }
     .pain-card{
-      min-height:156px;
-      padding:22px;
+      min-height:172px;
+      padding:24px 22px;
       border-right:1px solid #d9e9e9;
       border-bottom:1px solid #d9e9e9;
+      background:#fff;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      gap:18px;
+      gap:14px;
+      transition:background .18s ease;
     }
+    .pain-card:hover{background:#f0fafa}
     .pain-card:nth-child(4n){border-right:0}
     .pain-card:nth-last-child(-n+4){border-bottom:0}
-    .pain-card small{color:var(--primary-dark);font-weight:900;letter-spacing:.8px}
-    .pain-card strong{display:block;color:#102f31;font-size:1rem;line-height:1.25}
+    .pain-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .pain-card small{color:var(--primary-dark);font-weight:900;letter-spacing:.8px;font-size:.72rem}
+    .pain-card-icon{
+      width:36px;
+      height:36px;
+      border-radius:8px;
+      background:#eaf8f8;
+      display:grid;
+      place-items:center;
+      flex-shrink:0;
+    }
+    .pain-card-icon svg{color:var(--primary)}
+    .pain-card strong{display:block;color:#102f31;font-size:.95rem;line-height:1.3}
 
+    /* ── METHOD ─────────────────────────────── */
     .split{
       display:grid;
       grid-template-columns:.92fr 1.08fr;
@@ -315,55 +528,92 @@
     }
     .method-row{
       display:grid;
-      grid-template-columns:112px 1fr;
+      grid-template-columns:90px 1fr;
       border-bottom:1px solid var(--line);
       min-height:132px;
     }
     .method-row:last-child{border-bottom:0}
-    .method-row span{
-      display:grid;
-      place-items:center;
+    .method-icon-col{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:16px;
+      border-right:1px solid var(--line);
+      background:rgba(1,142,149,.06);
+    }
+    .method-icon-col svg{color:var(--primary-light)}
+    .method-icon-col span{
       color:var(--primary-light);
       font-weight:900;
-      font-size:1.3rem;
-      border-right:1px solid var(--line);
+      font-size:.72rem;
+      letter-spacing:.6px;
     }
     .method-row div{padding:25px 28px}
     .method-row h3{margin:0 0 7px;color:#fff;font-size:1.1rem}
     .method-row p{margin:0;color:#c5dcdc;font-size:.94rem}
 
-    .benefit-list{
+    /* ── BENEFITS ───────────────────────────── */
+    .benefit-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:12px;
-      margin:28px 0 0;
+      gap:14px;
+      margin:32px 0 0;
       padding:0;
       list-style:none;
     }
-    .benefit-list li{
+    .benefit-item{
+      display:flex;
+      align-items:center;
+      gap:14px;
       border:1px solid #d8eaea;
       background:#fff;
       color:#123638;
-      padding:16px 18px;
+      padding:18px 20px;
       font-weight:800;
+      font-size:.94rem;
+      transition:background .16s ease, border-color .16s ease;
     }
+    .benefit-item:hover{background:#eaf8f8;border-color:var(--primary-light)}
+    .benefit-check{
+      flex-shrink:0;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      background:var(--primary);
+      display:grid;
+      place-items:center;
+    }
+    .benefit-check svg{color:#fff}
 
+    /* ── DETAILS ────────────────────────────── */
     .details-wrap{
       display:grid;
-      grid-template-columns:.82fr 1.18fr;
+      grid-template-columns:.72fr 1.28fr;
       gap:0;
       border:1px solid var(--line);
       background:#061516;
     }
-    .details-logo{
-      min-height:360px;
-      display:grid;
-      place-items:center;
-      padding:42px;
+    .details-logo-side{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:28px;
+      padding:42px 36px;
       border-right:1px solid var(--line);
       background:#000;
     }
-    .details-logo img{width:min(310px,100%);height:auto;display:block}
+    .details-logo-side img{width:min(220px,100%);height:auto;display:block}
+    .details-address{
+      text-align:center;
+      color:#99dcdc;
+      font-size:.78rem;
+      font-weight:700;
+      line-height:1.5;
+    }
+    .details-address strong{display:block;color:#dffafa;font-size:.92rem;margin-bottom:4px}
     .details-list{
       display:grid;
       grid-template-columns:repeat(2,1fr);
@@ -372,33 +622,46 @@
       list-style:none;
     }
     .details-list li{
-      min-height:180px;
+      min-height:160px;
       padding:28px;
       border-right:1px solid var(--line);
       border-bottom:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
     .details-list li:nth-child(2n){border-right:0}
     .details-list li:nth-last-child(-n+2){border-bottom:0}
+    .details-list .detail-icon{
+      width:38px;
+      height:38px;
+      border-radius:8px;
+      background:rgba(1,142,149,.14);
+      display:grid;
+      place-items:center;
+    }
+    .details-list .detail-icon svg{color:var(--primary-light)}
     .details-list small{
       display:block;
-      margin:0 0 12px;
       color:var(--primary-light);
       font-weight:900;
       text-transform:uppercase;
       letter-spacing:.9px;
+      font-size:.68rem;
     }
     .details-list strong{
       color:#fff;
-      font-size:1.25rem;
-      line-height:1.2;
+      font-size:1.1rem;
+      line-height:1.3;
     }
 
+    /* ── FORM ───────────────────────────────── */
     .lead-section{
       position:relative;
       overflow:hidden;
       background:
-        linear-gradient(90deg,rgba(106,193,193,.08) 1px,transparent 1px),
-        linear-gradient(180deg,rgba(106,193,193,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(106,193,193,.07) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(106,193,193,.07) 1px,transparent 1px),
         linear-gradient(135deg,#000 0%,#061516 54%,#002f34 100%);
       background-size:58px 58px,58px 58px,auto;
       color:#fff;
@@ -410,7 +673,7 @@
       inset:10% -20% auto auto;
       width:520px;
       height:520px;
-      background:radial-gradient(circle,rgba(106,193,193,.28),transparent 68%);
+      background:radial-gradient(circle,rgba(106,193,193,.22),transparent 68%);
       pointer-events:none;
     }
     .form-shell{
@@ -422,18 +685,49 @@
     .form-aside{
       position:sticky;
       top:24px;
-      border-left:8px solid var(--primary);
-      padding:8px 0 8px 28px;
     }
-    .form-aside img{width:220px;max-width:100%;height:auto;margin:0 0 28px;display:block}
+    .form-aside img{width:200px;max-width:100%;height:auto;margin:0 0 24px;display:block}
+    .form-aside-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 16px;
+      border:1px solid rgba(245,158,11,.36);
+      border-radius:999px;
+      background:rgba(245,158,11,.10);
+      color:var(--gold-light);
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.9px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .form-aside-badge svg{fill:var(--gold);width:10px;height:10px}
     .form-aside h2{
       margin:0;
-      font-size:clamp(2rem,4vw,3.25rem);
-      line-height:1;
+      font-size:clamp(1.9rem,4vw,3.1rem);
+      line-height:1.02;
       letter-spacing:0;
       font-weight:900;
     }
-    .form-aside p{margin:18px 0 0;color:#c5dcdc;font-weight:600}
+    .form-aside p{margin:18px 0 0;color:#c5dcdc;font-weight:600;font-size:.96rem}
+    .form-aside-list{
+      list-style:none;
+      margin:22px 0 0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .form-aside-list li{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#b9d8d9;
+      font-size:.88rem;
+      font-weight:700;
+    }
+    .form-aside-list li svg{color:var(--primary-light);flex-shrink:0}
     .lead-form{
       position:relative;
       overflow:hidden;
@@ -448,13 +742,10 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(135deg,rgba(106,193,193,.16),transparent 34%);
+      background:linear-gradient(135deg,rgba(106,193,193,.14),transparent 32%);
       pointer-events:none;
     }
-    .lead-form>*{
-      position:relative;
-      z-index:1;
-    }
+    .lead-form>*{position:relative;z-index:1}
     .form-progress{
       margin:0 0 24px;
       padding:18px;
@@ -477,10 +768,7 @@
       letter-spacing:.9px;
       text-transform:uppercase;
     }
-    .progress-meta span:last-child{
-      text-align:right;
-      font-size:.9rem;
-    }
+    .progress-meta span:last-child{text-align:right;font-size:.9rem}
     .progress-bar{
       height:8px;
       overflow:hidden;
@@ -495,27 +783,11 @@
       background:linear-gradient(90deg,var(--primary-light),var(--primary));
       transition:width .24s ease;
     }
-    .form-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-    }
-    .form-grid.is-stepped{
-      display:block;
-    }
-    .step-fields{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-    }
-    .form-step{
-      display:none;
-      grid-column:1/-1;
-    }
-    .form-step.is-active{
-      display:block;
-      animation:stepIn .18s ease;
-    }
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .form-grid.is-stepped{display:block}
+    .step-fields{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .form-step{display:none;grid-column:1/-1}
+    .form-step.is-active{display:block;animation:stepIn .18s ease}
     @keyframes stepIn{
       from{opacity:0;transform:translateY(8px)}
       to{opacity:1;transform:translateY(0)}
@@ -535,11 +807,7 @@
       border-radius:8px;
       background:rgba(0,0,0,.22);
     }
-    .field-label{
-      color:#f2ffff;
-      font-size:.88rem;
-      font-weight:900;
-    }
+    .field-label{color:#f2ffff;font-size:.88rem;font-weight:900}
     input,select{
       width:100%;
       min-height:52px;
@@ -553,11 +821,7 @@
       font-weight:600;
     }
     select{cursor:pointer}
-    .option-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:10px;
-    }
+    .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
     .option{
       position:relative;
       min-height:52px;
@@ -600,10 +864,7 @@
       gap:12px;
       margin-top:22px;
     }
-    .step-actions .btn{
-      border-radius:8px;
-      min-width:150px;
-    }
+    .step-actions .btn{border-radius:8px;min-width:150px}
     .step-actions .btn[hidden]{display:none}
     .form-note{margin:0;color:#c5dcdc;font-size:.82rem;font-weight:600}
     .form-actions .btn{border-radius:8px;min-width:220px}
@@ -613,7 +874,7 @@
       border:2px solid var(--primary);
       background:#e9fafa;
       color:#063336;
-      padding:24px;
+      padding:28px;
       margin-bottom:22px;
       font-weight:700;
     }
@@ -621,14 +882,25 @@
     .success-state h3{margin:0 0 8px;font-size:1.35rem}
     .success-state p{margin:0}
 
+    /* ── FINAL CTA ───────────────────────────── */
     .final-cta{
       background:#000;
       color:#fff;
-      padding:76px 0;
+      padding:88px 0;
       text-align:center;
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
+      position:relative;
+      overflow:hidden;
     }
+    .final-cta:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 100%, rgba(1,142,149,.14), transparent 70%);
+      pointer-events:none;
+    }
+    .final-cta-inner{position:relative;z-index:1}
     .final-cta h2{
       max-width:780px;
       margin:0 auto 18px;
@@ -636,20 +908,26 @@
       line-height:1;
       font-weight:900;
     }
-    .final-cta p{max-width:720px;margin:0 auto 26px;color:#c5dcdc}
+    .final-cta p{max-width:720px;margin:0 auto 32px;color:#c5dcdc}
+    .final-cta-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
 
-    footer{background:#fff;color:#173b3d;padding:34px 0}
+    /* ── FOOTER ─────────────────────────────── */
+    footer{background:#fff;color:#173b3d;padding:36px 0}
     .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:22px}
     .footer-inner img{width:145px;height:auto;display:block}
-    .footer-copy{text-align:right;font-size:.84rem;font-weight:700;color:#486264}
+    .footer-right{text-align:right}
+    .footer-copy{font-size:.84rem;font-weight:700;color:#486264}
     .footer-copy strong{display:block;color:#061516;margin-bottom:5px}
+    .footer-address{font-size:.78rem;color:var(--primary-dark);margin-top:6px;font-weight:600}
 
+    /* ── RESPONSIVE ──────────────────────────── */
     @media (max-width:1020px){
       .hero-inner,.split,.details-wrap,.form-shell{grid-template-columns:1fr}
       .hero-inner{min-height:auto;padding-top:56px}
-      .brand-panel{min-height:440px}
-      .details-logo{border-right:0;border-bottom:1px solid var(--line)}
+      .ill-panel{max-width:480px;margin:0 auto;width:100%}
+      .details-logo-side{border-right:0;border-bottom:1px solid var(--line)}
       .form-aside{position:static}
+      .nights-grid{grid-template-columns:1fr}
     }
     @media (max-width:760px){
       html{font-size:16px}
@@ -661,16 +939,17 @@
       .hero-inner{padding:42px 18px 58px}
       .hero h1{font-size:clamp(2.65rem,14vw,4.15rem)}
       .hero-actions .btn{width:100%}
-      .brand-panel{min-height:360px}
-      .brand-panel-top{padding:22px}
-      .panel-word strong{font-size:4rem}
-      .panel-steps,.quick-grid,.pain-grid,.benefit-list,.details-list,.form-grid,.step-fields,.option-grid{grid-template-columns:1fr}
-      .panel-steps div,.quick-item,.pain-card,.details-list li{border-right:0}
+      .ill-dates-row{grid-template-columns:repeat(3,1fr)}
+      .quick-grid,.pain-grid,.benefit-grid,.details-list,.form-grid,.step-fields,.option-grid{grid-template-columns:1fr}
+      .quick-item{border-right:0;border-bottom:1px solid #dceaea}
+      .quick-item:last-child{border-bottom:0}
+      .pain-card:nth-child(4n){border-right:1px solid #d9e9e9}
       .pain-card:nth-last-child(-n+4){border-bottom:1px solid #d9e9e9}
+      .pain-card:nth-child(odd){border-right:1px solid #d9e9e9}
+      .pain-card:nth-child(even){border-right:0}
       .pain-card:last-child,.details-list li:last-child{border-bottom:0}
-      .section,.lead-section{padding:62px 0}
+      .section,.lead-section,.dates-section{padding:62px 0}
       .method-row{grid-template-columns:72px 1fr}
-      .method-row div{padding:21px}
       .lead-form{padding:22px}
       .form-progress{padding:14px;margin-bottom:18px}
       .progress-meta{display:grid;gap:4px}
@@ -683,70 +962,267 @@
       .form-actions{display:grid}
       .form-actions .btn{width:100%;min-width:0}
       .footer-inner{display:grid;text-align:left}
-      .footer-copy{text-align:left}
+      .footer-right{text-align:left}
+      .final-cta-actions{display:grid}
+      .final-cta-actions .btn{width:100%}
     }
     @media (max-width:420px){
       .lead-section{padding:46px 0}
-      .form-aside{border-left-width:5px;padding-left:18px}
-      .form-aside img{width:168px;margin-bottom:20px}
+      .form-aside img{width:168px;margin-bottom:16px}
       .lead-form{padding:16px}
       .option{font-size:.86rem}
     }
   </style>
 </head>
 <body>
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="nav-logo" href="#top" aria-label="VOZUP">
         <img src="img/vozup-logo.jpeg" alt="VOZUP" />
-        <span>Oratória e Inteligência Emocional</span>
+        <span>Escola de Oratória e Inteligência Emocional</span>
       </a>
-      <a class="btn btn-light" href="#inscricao">Quero participar</a>
+      <nav class="nav-vip">
+        <span class="vip-chip">
+          <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+          Convite VIP
+        </span>
+        <a class="btn btn-light" href="#inscricao">Garantir minha vaga</a>
+      </nav>
     </div>
   </header>
 
   <main id="top">
+
+    <!-- ── HERO ──────────────────────────────── -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div>
-          <p class="eyebrow">Workshop Inaugural da VOZUP</p>
-          <h1 id="hero-title">Destrave sua comunicação <span>sem travar por dentro.</span></h1>
-          <p class="hero-copy">Participe de uma experiência 100% prática de oratória e inteligência emocional para controlar o nervosismo, organizar suas ideias e falar com mais segurança.</p>
+          <p class="eyebrow">Inauguração VOZUP · Convite VIP</p>
+          <h1 id="hero-title">Fale com presença <span>sem travar por dentro.</span></h1>
+          <p class="hero-copy">Três noites exclusivas de casa aberta com coquetel de boas-vindas e uma aula experimental onde você já sai com uma técnica de oratória para usar na sua próxima reunião ou apresentação.</p>
           <div class="hero-actions">
-            <a class="btn" href="#inscricao">Quero participar do Workshop</a>
-            <a class="btn btn-ghost" href="#metodo">Ver como funciona</a>
+            <a class="btn btn-gold" href="#inscricao">Quero garantir minha vaga</a>
+            <a class="btn btn-ghost" href="#noites">Ver as noites</a>
           </div>
-          <p class="hero-note">Vagas limitadas para garantir prática real e atenção individual.</p>
+          <p class="hero-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Apenas 40 convidados por noite · Lista exclusiva
+          </p>
         </div>
 
-        <aside class="brand-panel" aria-label="Resumo visual do Workshop VOZUP">
-          <div class="brand-panel-top">
+        <aside class="ill-panel" aria-label="Detalhes das noites de inauguração">
+          <div class="ill-panel-top">
             <img src="img/vozup-logo.jpeg" alt="VOZUP" />
-            <div class="panel-label">Turma<br>inaugural</div>
-          </div>
-          <div class="panel-word">
-            <div>
-              <strong>Fale</strong>
-              <span>com presença</span>
+            <div class="vip-stamp">
+              <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+              Convite<br>VIP
             </div>
           </div>
-          <div class="panel-steps">
-            <div>Respirar</div>
-            <div>Organizar</div>
-            <div>Comunicar</div>
+
+          <div class="ill-svg-area">
+            <!-- Microphone + sound waves illustration -->
+            <svg viewBox="0 0 340 310" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Background ambient glow -->
+              <ellipse cx="170" cy="155" rx="130" ry="120" fill="rgba(1,142,149,0.05)"/>
+
+              <!-- Sound waves – right side -->
+              <path d="M 238 90 Q 295 155 238 220" stroke="#018E95" stroke-width="2" fill="none" opacity="0.25" stroke-linecap="round"/>
+              <path d="M 222 108 Q 268 155 222 202" stroke="#018E95" stroke-width="2.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+              <path d="M 208 122 Q 245 155 208 188" stroke="#6AC1C1" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+              <!-- Sound waves – left side -->
+              <path d="M 102 90 Q 45 155 102 220" stroke="#018E95" stroke-width="2" fill="none" opacity="0.2" stroke-linecap="round"/>
+              <path d="M 118 108 Q 72 155 118 202" stroke="#018E95" stroke-width="2" fill="none" opacity="0.3" stroke-linecap="round"/>
+              <path d="M 132 122 Q 95 155 132 188" stroke="#6AC1C1" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+              <!-- Microphone body -->
+              <rect x="145" y="58" width="50" height="110" rx="25" fill="#018E95"/>
+              <!-- Mic highlight glass -->
+              <rect x="151" y="66" width="20" height="48" rx="10" fill="rgba(255,255,255,0.14)"/>
+              <!-- Mic grille lines -->
+              <line x1="147" y1="112" x2="193" y2="112" stroke="#006b72" stroke-width="1.5" opacity="0.9"/>
+              <line x1="147" y1="124" x2="193" y2="124" stroke="#006b72" stroke-width="1.5" opacity="0.9"/>
+              <line x1="147" y1="136" x2="193" y2="136" stroke="#006b72" stroke-width="1.5" opacity="0.9"/>
+              <!-- Mic grille dot pattern top -->
+              <circle cx="158" cy="80" r="2" fill="rgba(255,255,255,0.18)"/>
+              <circle cx="166" cy="76" r="2" fill="rgba(255,255,255,0.18)"/>
+              <circle cx="174" cy="80" r="2" fill="rgba(255,255,255,0.18)"/>
+              <circle cx="182" cy="76" r="2" fill="rgba(255,255,255,0.18)"/>
+              <circle cx="158" cy="90" r="2" fill="rgba(255,255,255,0.12)"/>
+              <circle cx="166" cy="86" r="2" fill="rgba(255,255,255,0.12)"/>
+              <circle cx="174" cy="90" r="2" fill="rgba(255,255,255,0.12)"/>
+              <circle cx="182" cy="86" r="2" fill="rgba(255,255,255,0.12)"/>
+
+              <!-- Mic stand bracket -->
+              <path d="M 115 168 Q 115 196 170 196 Q 225 196 225 168" stroke="#6AC1C1" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <!-- Mic stand pole -->
+              <line x1="170" y1="196" x2="170" y2="262" stroke="#6AC1C1" stroke-width="4" stroke-linecap="round"/>
+              <!-- Base ellipse -->
+              <ellipse cx="170" cy="266" rx="46" ry="11" fill="none" stroke="#6AC1C1" stroke-width="3.5"/>
+
+              <!-- Sparkle top right -->
+              <g transform="translate(264,62)" stroke="#6AC1C1" stroke-linecap="round">
+                <line x1="0" y1="-10" x2="0" y2="10" stroke-width="2.5" opacity="0.9"/>
+                <line x1="-10" y1="0" x2="10" y2="0" stroke-width="2.5" opacity="0.9"/>
+                <line x1="-6" y1="-6" x2="6" y2="6" stroke-width="1.5" opacity="0.5"/>
+                <line x1="6" y1="-6" x2="-6" y2="6" stroke-width="1.5" opacity="0.5"/>
+              </g>
+              <!-- Sparkle top left -->
+              <g transform="translate(76,72)" stroke="#018E95" stroke-linecap="round">
+                <line x1="0" y1="-7" x2="0" y2="7" stroke-width="2" opacity="0.8"/>
+                <line x1="-7" y1="0" x2="7" y2="0" stroke-width="2" opacity="0.8"/>
+              </g>
+              <!-- Small dot accent right -->
+              <g transform="translate(290,180)" opacity="0.6">
+                <circle cx="0" cy="0" r="3.5" fill="#6AC1C1" opacity="0.5"/>
+                <circle cx="13" cy="0" r="3.5" fill="#6AC1C1" opacity="0.35"/>
+                <circle cx="26" cy="0" r="3.5" fill="#6AC1C1" opacity="0.2"/>
+              </g>
+              <!-- Dot accent left -->
+              <g transform="translate(24,180)" opacity="0.6">
+                <circle cx="0" cy="0" r="3" fill="#018E95" opacity="0.4"/>
+                <circle cx="12" cy="0" r="3" fill="#018E95" opacity="0.28"/>
+                <circle cx="24" cy="0" r="3" fill="#018E95" opacity="0.16"/>
+              </g>
+
+              <!-- Speech bubble floating right -->
+              <g opacity="0.75">
+                <rect x="226" y="42" width="96" height="42" rx="10" fill="none" stroke="rgba(106,193,193,0.5)" stroke-width="1.5"/>
+                <path d="M 240 84 L 234 96 L 252 84" fill="rgba(1,142,149,0.2)" stroke="rgba(106,193,193,0.5)" stroke-width="1.5" stroke-linejoin="round"/>
+                <line x1="242" y1="57" x2="308" y2="57" stroke="rgba(106,193,193,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="242" y1="69" x2="294" y2="69" stroke="rgba(106,193,193,0.28)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="ill-panel-footer">
+            <div class="ill-dates-row">
+              <div class="ill-date-item"><b>07</b><span>Julho · 19h</span></div>
+              <div class="ill-date-item"><b>08</b><span>Julho · 19h</span></div>
+              <div class="ill-date-item"><b>09</b><span>Julho · 19h</span></div>
+            </div>
+            <div class="ill-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Rua Azevedo Soares, 1334 · Tatuapé, São Paulo
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="quick-strip" aria-label="Características do workshop">
+    <!-- ── QUICK STRIP ────────────────────────── -->
+    <section class="quick-strip" aria-label="Destaques">
       <div class="quick-grid">
-        <div class="quick-item"><b>100%</b><span>prático e mão na massa</span></div>
-        <div class="quick-item"><b>Foco</b><span>em segurança, clareza e controle emocional</span></div>
-        <div class="quick-item"><b>Vagas</b><span>limitadas para atenção individual</span></div>
+        <div class="quick-item">
+          <div class="quick-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div><b>3 noites</b><span>07, 08 e 09 de Julho · 19h</span></div>
+        </div>
+        <div class="quick-item">
+          <div class="quick-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><b>40 vagas</b><span>por noite · atenção individual</span></div>
+        </div>
+        <div class="quick-item">
+          <div class="quick-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div><b>Gratuito</b><span>coquetel + aula experimental</span></div>
+        </div>
       </div>
     </section>
 
+    <!-- ── TRÊS NOITES ────────────────────────── -->
+    <section class="dates-section" id="noites" aria-labelledby="noites-title">
+      <div class="container">
+        <div class="dates-head">
+          <p class="dates-kicker">Casa aberta · Lista exclusiva</p>
+          <h2 id="noites-title">Três noites de inauguração.</h2>
+          <p>Uma experiência que começa com coquetel de boas-vindas e termina com você praticando uma técnica de oratória real. Vagas por ordem de confirmação.</p>
+        </div>
+        <div class="nights-grid">
+          <article class="night-card">
+            <span class="night-number">01</span>
+            <p class="night-date">Segunda-feira</p>
+            <h3 class="night-day">07<span class="night-month">de Julho</span></h3>
+            <div class="night-divider"></div>
+            <ul class="night-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Coquetel de boas-vindas
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Aula experimental gratuita
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Técnica prática para levar
+              </li>
+            </ul>
+            <span class="night-tag">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+              Lista VIP · 40 vagas
+            </span>
+          </article>
+
+          <article class="night-card">
+            <span class="night-number">02</span>
+            <p class="night-date">Terça-feira</p>
+            <h3 class="night-day">08<span class="night-month">de Julho</span></h3>
+            <div class="night-divider"></div>
+            <ul class="night-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Coquetel de boas-vindas
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Aula experimental gratuita
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Técnica prática para levar
+              </li>
+            </ul>
+            <span class="night-tag">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+              Lista VIP · 40 vagas
+            </span>
+          </article>
+
+          <article class="night-card">
+            <span class="night-number">03</span>
+            <p class="night-date">Quarta-feira</p>
+            <h3 class="night-day">09<span class="night-month">de Julho</span></h3>
+            <div class="night-divider"></div>
+            <ul class="night-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Coquetel de boas-vindas
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Aula experimental gratuita
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Técnica prática para levar
+              </li>
+            </ul>
+            <span class="night-tag">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+              Lista VIP · 40 vagas
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── O QUE TRAVA ──────────────────────── -->
     <section class="section tinted">
       <div class="container">
         <div class="section-head">
@@ -755,18 +1231,83 @@
           <p class="section-lead">Medo, ansiedade e insegurança não são falta de capacidade. São sinais de que sua comunicação precisa de prática orientada e preparo emocional.</p>
         </div>
         <div class="pain-grid">
-          <article class="pain-card"><small>01</small><strong>Medo de falar em público</strong></article>
-          <article class="pain-card"><small>02</small><strong>Nervosismo antes de se apresentar</strong></article>
-          <article class="pain-card"><small>03</small><strong>Ansiedade na hora de se comunicar</strong></article>
-          <article class="pain-card"><small>04</small><strong>Branco na hora de falar</strong></article>
-          <article class="pain-card"><small>05</small><strong>Vergonha de se posicionar</strong></article>
-          <article class="pain-card"><small>06</small><strong>Dificuldade para organizar ideias</strong></article>
-          <article class="pain-card"><small>07</small><strong>Falta de confiança</strong></article>
-          <article class="pain-card"><small>08</small><strong>Voz trêmula ou insegura</strong></article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>01</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/><line x1="4" y1="4" x2="20" y2="20"/></svg>
+              </div>
+            </div>
+            <strong>Medo de falar em público</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>02</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <strong>Nervosismo antes de se apresentar</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>03</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+            <strong>Ansiedade na hora de se comunicar</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>04</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+            </div>
+            <strong>Branco na hora de falar</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>05</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </div>
+            </div>
+            <strong>Vergonha de se posicionar</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>06</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              </div>
+            </div>
+            <strong>Dificuldade para organizar ideias</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>07</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/><line x1="12" y1="8" x2="12" y2="13"/></svg>
+              </div>
+            </div>
+            <strong>Falta de confiança</strong>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card-top">
+              <small>08</small>
+              <div class="pain-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s2-4 5-4 5 4 5 4"/><path d="M13 12s2-4 5-4 3 4 3 4"/><line x1="1" y1="18" x2="23" y2="6"/></svg>
+              </div>
+            </div>
+            <strong>Voz trêmula ou insegura</strong>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- ── MÉTODO ─────────────────────────────── -->
     <section class="section dark" id="metodo">
       <div class="container split">
         <div>
@@ -776,72 +1317,144 @@
         </div>
         <div class="method-board">
           <article class="method-row">
-            <span>01</span>
+            <div class="method-icon-col">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              <span>01</span>
+            </div>
             <div><h3>Oratória prática</h3><p>Exercícios reais para desenvolver segurança, clareza e presença na comunicação.</p></div>
           </article>
           <article class="method-row">
-            <span>02</span>
+            <div class="method-icon-col">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span>02</span>
+            </div>
             <div><h3>Inteligência emocional</h3><p>Estratégias para controlar nervosismo, ansiedade e medo de travar.</p></div>
           </article>
           <article class="method-row">
-            <span>03</span>
+            <div class="method-icon-col">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>03</span>
+            </div>
             <div><h3>Atenção individual</h3><p>Turma reduzida para que cada participante receba acompanhamento mais próximo.</p></div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ── BENEFÍCIOS ─────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <p class="section-kicker">Resultado esperado</p>
+          <p class="section-kicker">O que você leva</p>
           <h2>Você pratica para falar melhor no mundo real.</h2>
           <p class="section-lead">O objetivo é sair do campo da teoria e treinar uma comunicação mais clara, segura e organizada para apresentações, reuniões, conversas profissionais e situações do dia a dia.</p>
         </div>
-        <ul class="benefit-list">
-          <li>Falar com mais segurança</li>
-          <li>Controlar o nervosismo</li>
-          <li>Reduzir o medo de travar</li>
-          <li>Organizar melhor as ideias</li>
-          <li>Melhorar apresentações e reuniões</li>
-          <li>Desenvolver confiança ao se comunicar</li>
+        <ul class="benefit-grid">
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Falar com mais segurança
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Controlar o nervosismo
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Reduzir o medo de travar
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Organizar melhor as ideias
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Melhorar apresentações e reuniões
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Desenvolver confiança ao se comunicar
+          </li>
         </ul>
       </div>
     </section>
 
+    <!-- ── DETALHES DO EVENTO ─────────────────── -->
     <section class="section dark">
       <div class="container">
         <div class="section-head">
-          <p class="section-kicker">Workshop Inaugural</p>
+          <p class="section-kicker">Onde e quando</p>
           <h2>A primeira turma da escola VOZUP.</h2>
           <p class="section-lead">Uma experiência presencial, prática e focada em destravar a comunicação com mais controle emocional e segurança ao falar.</p>
         </div>
         <div class="details-wrap">
-          <div class="details-logo">
+          <div class="details-logo-side">
             <img src="img/vozup-logo.jpeg" alt="VOZUP" />
+            <div class="details-address">
+              <strong>Rua Azevedo Soares, 1334</strong>
+              Tatuapé · São Paulo · SP
+            </div>
           </div>
           <ul class="details-list">
-            <li><small>Formato</small><strong>Presencial</strong></li>
-            <li><small>Modalidade</small><strong>100% prático</strong></li>
-            <li><small>Público</small><strong>Pessoas que querem melhorar a comunicação</strong></li>
-            <li><small>Foco</small><strong>Oratória, confiança e inteligência emocional</strong></li>
+            <li>
+              <div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <small>Datas</small>
+              <strong>07, 08 e 09 de Julho</strong>
+            </li>
+            <li>
+              <div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <small>Horário</small>
+              <strong>19h · Casa aberta</strong>
+            </li>
+            <li>
+              <div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <small>Local</small>
+              <strong>Tatuapé · São Paulo</strong>
+            </li>
+            <li>
+              <div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <small>Vagas</small>
+              <strong>40 por noite · lista exclusiva</strong>
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- ── FORMULÁRIO ─────────────────────────── -->
     <section class="lead-section" id="inscricao">
       <div class="container form-shell">
         <aside class="form-aside">
           <img src="img/vozup-logo-light.jpeg" alt="VOZUP" />
-          <h2>Garanta seu interesse na turma inaugural.</h2>
-          <p>Preencha seus dados para receber os detalhes do Workshop Inaugural da VOZUP pelo WhatsApp.</p>
+          <div class="form-aside-badge">
+            <svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>
+            Convite VIP · lista exclusiva
+          </div>
+          <h2>Garanta seu lugar nas noites de inauguração.</h2>
+          <p>Preencha seus dados para receber os detalhes e confirmação da sua vaga pelo WhatsApp.</p>
+          <ul class="form-aside-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Coquetel de boas-vindas
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Aula experimental gratuita
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              07, 08 e 09 de Julho · 19h
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Tatuapé · São Paulo
+            </li>
+          </ul>
         </aside>
 
         <div class="lead-form">
           <div id="formSuccess" class="success-state" role="status" aria-live="polite">
-            <h3>Obrigado!</h3>
-            <p>A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.</p>
+            <h3>Vaga reservada!</h3>
+            <p>A equipe da VOZUP entrará em contato pelo WhatsApp para confirmar sua presença e passar os detalhes da noite de inauguração.</p>
           </div>
 
           <div class="form-progress" id="formProgress" aria-label="Progresso do formulário">
@@ -929,7 +1542,7 @@
               </div>
 
               <div class="field full">
-                <span class="field-label">Você tem interesse em participar do Workshop Inaugural da VOZUP?</span>
+                <span class="field-label">Você tem interesse em participar das noites de inauguração da VOZUP?</span>
                 <div class="option-grid">
                   <label class="option"><input type="radio" name="interesse_workshop" value="Sim, quero receber mais informações" required /> Sim, quero receber mais informações</label>
                   <label class="option"><input type="radio" name="interesse_workshop" value="Tenho interesse, mas quero entender melhor" /> Tenho interesse, mas quero entender melhor</label>
@@ -952,30 +1565,38 @@
             <div class="step-actions">
               <button type="button" class="btn btn-ghost" id="prevStep">Voltar</button>
               <button type="button" class="btn" id="nextStep">Próximo</button>
-              <button type="submit" class="btn" id="submitLead" hidden>Enviar meu interesse</button>
+              <button type="submit" class="btn btn-gold" id="submitLead" hidden>Reservar minha vaga</button>
             </div>
-            <p class="form-note">Sem data, local ou horário definidos nesta página. A equipe enviará os detalhes confirmados pelo WhatsApp.</p>
+            <p class="form-note">Confirmação enviada pelo WhatsApp. Sem compromisso de pagamento nesta etapa.</p>
             <div id="sendStatus" class="status" role="status" aria-live="polite"></div>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- ── FINAL CTA ──────────────────────────── -->
     <section class="final-cta">
-      <div class="container">
-        <h2>As vagas serão limitadas para manter a prática individual.</h2>
-        <p>A turma inaugural será reduzida para que cada participante receba orientação mais próxima durante os exercícios.</p>
-        <a class="btn btn-light" href="#inscricao">Quero receber os detalhes</a>
+      <div class="container final-cta-inner">
+        <h2>40 vagas por noite. Garanta a sua antes que acabem.</h2>
+        <p>A turma inaugural será reduzida para que cada participante receba orientação mais próxima durante os exercícios. Confirmações por ordem de chegada.</p>
+        <div class="final-cta-actions">
+          <a class="btn btn-gold" href="#inscricao">Quero garantir minha vaga</a>
+          <a class="btn btn-ghost" href="#noites">Ver as noites</a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container footer-inner">
       <img src="img/vozup-logo-light.jpeg" alt="VOZUP" />
-      <div class="footer-copy">
-        <strong>VOZUP - Escola de Oratória e Inteligência Emocional</strong>
-        Comunicação com segurança, clareza e inteligência emocional.
+      <div class="footer-right">
+        <div class="footer-copy">
+          <strong>VOZUP — Escola de Oratória e Inteligência Emocional</strong>
+          Comunicação com segurança, clareza e inteligência emocional.
+        </div>
+        <div class="footer-address">Rua Azevedo Soares, 1334 · Tatuapé · São Paulo · SP</div>
       </div>
     </div>
   </footer>
@@ -1007,30 +1628,25 @@
     function buildSteppedForm(){
       const originalFields = Array.from(formGrid.children);
       const fieldsByName = new Map();
-
       originalFields.forEach(field => {
         const control = field.querySelector('[name]');
         if(control && control.name) fieldsByName.set(control.name, field);
       });
-
       formGrid.innerHTML = '';
       formGrid.classList.add('is-stepped');
-
       stepDefinitions.forEach((step, index) => {
         const stepEl = document.createElement('section');
         stepEl.className = 'form-step';
         stepEl.dataset.step = String(index);
         stepEl.setAttribute('aria-label', step.title);
-
         const title = document.createElement('h3');
         title.className = 'form-step-title';
         title.textContent = step.title;
         stepEl.appendChild(title);
-
         if(step.review){
           const review = document.createElement('div');
           review.className = 'field full';
-          review.innerHTML = '<span class="field-label">Tudo pronto para enviar</span><p class="form-note" style="margin:0">Ao enviar, seus dados serão registrados para que a equipe da VOZUP compartilhe os detalhes do Workshop Inaugural pelo WhatsApp.</p>';
+          review.innerHTML = '<span class="field-label">Tudo pronto para enviar</span><p class="form-note" style="margin:0">Ao enviar, seus dados serão registrados para que a equipe da VOZUP confirme sua vaga e envie os detalhes pelo WhatsApp.</p>';
           stepEl.appendChild(review);
         } else {
           const fieldsWrap = document.createElement('div');
@@ -1041,7 +1657,6 @@
           });
           stepEl.appendChild(fieldsWrap);
         }
-
         formGrid.appendChild(stepEl);
       });
     }
@@ -1049,16 +1664,13 @@
     function showFormStep(index, shouldScroll = true){
       const steps = Array.from(form.querySelectorAll('.form-step'));
       currentStep = Math.max(0, Math.min(steps.length - 1, index));
-
       steps.forEach((step, stepIndex) => {
         step.classList.toggle('is-active', stepIndex === currentStep);
       });
-
       const total = steps.length;
       const isFirst = currentStep === 0;
       const isLast = currentStep === total - 1;
       const percent = ((currentStep + 1) / total) * 100;
-
       stepLabel.textContent = `Etapa ${currentStep + 1} de ${total}`;
       stepName.textContent = stepDefinitions[currentStep].title;
       progressFill.style.width = `${percent}%`;
@@ -1066,7 +1678,6 @@
       nextStepBtn.hidden = isLast;
       submitLeadBtn.hidden = !isLast;
       setStatus('');
-
       if(shouldScroll && window.innerWidth < 760){
         formProgress.scrollIntoView({ behavior:'smooth', block:'start' });
       }
@@ -1088,11 +1699,9 @@
     function validateContainer(container){
       let valid = true;
       const radioNames = new Set();
-
       container.querySelectorAll('input, select').forEach(input => {
         const name = input.name || input.id;
         if(!name) return;
-
         if(input.type === 'radio'){
           if(radioNames.has(name)) return;
           radioNames.add(name);
@@ -1104,19 +1713,16 @@
           }
           return;
         }
-
         if(input.required && !String(input.value || '').trim()){
           const error = getErrorElement(name);
           if(error) error.textContent = 'Campo obrigatório.';
           valid = false;
         }
-
         if(name === 'nome' && input.value.trim() && input.value.trim().split(/\s+/).length < 2){
           const error = getErrorElement(name);
           if(error) error.textContent = 'Informe seu nome completo.';
           valid = false;
         }
-
         if(name === 'telefone'){
           const digits = input.value.replace(/\D+/g, '');
           if(digits.length < 10 || digits.length > 11){
@@ -1126,7 +1732,6 @@
           }
         }
       });
-
       return valid;
     }
 
@@ -1140,17 +1745,14 @@
       clearErrors();
       const steps = Array.from(form.querySelectorAll('.form-step'));
       let firstInvalidStep = -1;
-
       steps.forEach((step, index) => {
         const valid = validateContainer(step);
         if(!valid && firstInvalidStep === -1) firstInvalidStep = index;
       });
-
       if(firstInvalidStep !== -1){
         showFormStep(firstInvalidStep);
         return false;
       }
-
       return true;
     }
 
@@ -1207,12 +1809,13 @@
           data[key] = input.value;
         }
       });
-
       return normalizePayloadValues({
-        nome_evento:'Workshop Inaugural VOZUP',
+        nome_evento:'Inauguração VOZUP Escola de Oratória',
         escola:'VOZUP - Escola de Oratória e Inteligência Emocional',
-        modalidade:'Workshop 100% prático',
+        modalidade:'Noite de inauguração · presencial',
         foco:'Oratória, confiança e inteligência emocional',
+        datas:'07, 08 e 09 de Julho · 19h',
+        local:'Rua Azevedo Soares, 1334 - Tatuapé, São Paulo',
         ...data,
         clientId:getClientId(),
         timestamp:new Date().toISOString(),
@@ -1248,32 +1851,28 @@
         setStatus('Preencha os campos obrigatórios.', 'error');
         return;
       }
-
       const submit = form.querySelector('button[type="submit"]');
       isSubmitting = true;
       submit.disabled = true;
       submit.textContent = 'Enviando...';
-      setStatus('Enviando seu interesse...', 'info');
-
+      setStatus('Reservando sua vaga...', 'info');
       try{
         const response = await fetch(API_ENDPOINT, {
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify(collectData())
         });
-
         if(!response.ok) throw new Error('Falha ao enviar');
-
         form.hidden = true;
         formProgress.hidden = true;
         successBlock.classList.add('is-visible');
-        setStatus('Obrigado! A equipe da VOZUP entrará em contato pelo WhatsApp para passar os detalhes do Workshop Inaugural.', 'ok');
+        setStatus('Vaga reservada! A equipe da VOZUP entrará em contato pelo WhatsApp para confirmar sua presença.', 'ok');
         sessionStorage.removeItem('vozup:clientId');
       }catch(error){
         console.warn(error);
         setStatus('Não foi possível enviar agora. Tente novamente em instantes.', 'error');
         submit.disabled = false;
-        submit.textContent = 'Enviar meu interesse';
+        submit.textContent = 'Reservar minha vaga';
         isSubmitting = false;
       }
     });
