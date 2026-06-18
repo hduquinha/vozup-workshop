@@ -537,6 +537,48 @@ function buildFallbackPayload(payload, clientId) {
   return { ...payload, _meta: meta };
 }
 
+function normalizeWhatsAppNumber(number) {
+  const digits = String(number || '').replace(/\D/g, '');
+  if (!digits) return '';
+  if (digits.startsWith('55')) return digits;
+  if (digits.length === 10 || digits.length === 11) return `55${digits}`;
+  return digits;
+}
+
+function buildWorkshopLeadMessage(payload) {
+  const meta = payload._meta && typeof payload._meta === 'object' ? payload._meta : {};
+  return [
+    '🎤 Novo lead — Workshop VozUP',
+    `Nome: ${payload.nome || '-'}`,
+    `WhatsApp: ${payload.telefone || payload.whatsapp || '-'}`,
+    payload.email ? `Email: ${payload.email}` : '',
+    payload.cidade ? `Cidade: ${payload.cidade}` : '',
+    payload.interesse_workshop ? `Interesse: ${payload.interesse_workshop}` : '',
+    `Recebido em: ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}`,
+  ].filter(Boolean).join('\n');
+}
+
+async function sendWhatsAppNotification(payload) {
+  const baseUrl = (String(process.env.UAZAPI_BASE_URL || 'https://free.uazapi.com')).replace(/\/+$/, '');
+  const token = String(process.env.UAZAPI_INSTANCE_TOKEN || '').trim();
+  const notifyNumber = normalizeWhatsAppNumber(
+    process.env.UAZAPI_NOTIFY_NUMBER || '11988874277'
+  );
+
+  if (!token || !notifyNumber) return;
+
+  const response = await fetch(`${baseUrl}/send/text`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', token },
+    body: JSON.stringify({ number: notifyNumber, text: buildWorkshopLeadMessage(payload) }),
+  });
+
+  if (!response.ok) {
+    const text = await response.text().catch(() => '');
+    console.error('Falha ao enviar WhatsApp via UazAPI:', response.status, text.slice(0, 200));
+  }
+}
+
 async function tryFallbackSave(payload, clientId) {
   const fallbackUrl = getFallbackUrl();
   if (!fallbackUrl || typeof fetch !== 'function') return false;
@@ -634,9 +676,23 @@ async function handler(req, res) {
       }
     }
 
-    const payloadToInsert = await preparePayloadForInsert(pg, payload);
+    const isFinal = payload._meta?.final === true;
+    const basePayload = await preparePayloadForInsert(pg, payload);
+
+    const payloadToInsert = {
+      ...basePayload,
+      unidade_negocio: 'Voz UP',
+      origem: basePayload.origem || 'Workshop VozUP',
+      ...( isFinal ? { _final: 'true' } : {} ),
+    };
 
     await pg.query('INSERT INTO inscricoes.inscricoes (payload) VALUES ($1)', [payloadToInsert]);
+
+    if (isFinal) {
+      sendWhatsAppNotification(payloadToInsert).catch((err) => {
+        console.error('Falha ao enviar notificacao WhatsApp:', err);
+      });
+    }
 
     res.status(200).json({ ok: true });
   } catch (err) {
