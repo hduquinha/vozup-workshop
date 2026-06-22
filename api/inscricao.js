@@ -676,7 +676,7 @@ async function handler(req, res) {
       }
     }
 
-    const isFinal = payload._meta?.final === true;
+    const isFinal = payload._meta?.final === true || payload._final === true || payload._final === 'true';
     const basePayload = await preparePayloadForInsert(pg, payload);
 
     const payloadToInsert = {
